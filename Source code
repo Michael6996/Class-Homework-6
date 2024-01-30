@@ -1,0 +1,49 @@
+import java.io.*;
+import java.util.*;
+
+class Animal {
+    public int age;
+    public String gender;
+
+    public boolean isMammal() {
+        System.out.println("This animal is a mammal");
+        return true;
+    }
+
+    public void mate() {
+        System.out.println("This is the mate() method from class Animal");
+    }
+
+    public static void main(String[] args) {
+        Animal myAnimal = new Animal();
+        Fish myFish = new Fish();
+        Zebra myZebra = new Zebra();
+
+        myAnimal.isMammal();
+        myAnimal.mate();
+
+        myZebra.mate();
+        myZebra.run();
+    }
+}
+
+class Fish extends Animal {
+    private int sizeInFeet;
+     
+
+    private void canEat() {
+        System.out.println("This is the private method canEat() from class Fish");
+        System.out.println("This is the private method sizeInFeet() from class Fish");
+    }
+}
+
+class Zebra extends Animal {
+    public boolean is_wild;
+    
+
+    public void run() {
+        System.out.println("This is the run() method from class Zebra");
+        System.out.println("This is the is_wild() method from class Zebra");
+    }
+    
+}
